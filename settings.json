@@ -1,0 +1,15 @@
+{
+  "app": {
+    "server_name": "localhost",
+    "port_run": ":1111",
+    "server_url": "127.0.0.1",
+    "log_file": "./logs/gin.log"
+  },
+  "postgres_params": {
+    "server": "127.0.0.1",
+    "port": "5432",
+    "user": "postgres",
+    "password": "nekruzroot",
+    "database": "eis"
+  }
+}

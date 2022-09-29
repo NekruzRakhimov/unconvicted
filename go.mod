@@ -1,4 +1,4 @@
-module unconvicted
+module github.com/NekruzRakhimov/unconvicted
 
 go 1.17
 

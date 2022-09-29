@@ -1,7 +1,7 @@
 {
   "app": {
     "server_name": "localhost",
-    "port_run": "1111",
+    "port_run": "5555",
     "server_url": "127.0.0.1",
     "log_file": "./logs/gin.log"
   },

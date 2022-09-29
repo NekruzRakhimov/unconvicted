@@ -2,8 +2,12 @@ package routes
 
 import (
 	"fmt"
+	"github.com/NekruzRakhimov/unconvicted/models"
 	"github.com/NekruzRakhimov/unconvicted/utils"
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
+	"github.com/swaggo/swag/example/basic/docs"
 	"net/http"
 	"os"
 )
@@ -29,10 +33,21 @@ func RunAllRoutes() {
 
 func initAllRoutes(r *gin.Engine) {
 	r.GET("/ping", PingPong)
+	docs.SwaggerInfo.BasePath = "/"
+	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 }
 
-// PingPong Проверка
+//PingPong unconvicted godoc
+// @Summary unconvicted
+// @Description Роут для проверки работы сервера
+// @Accept  json
+// @Produce  json
+// @Tags url
+// @Success 200 {object} models.PingPong
+// @Failure 400,404 {object} map[string]interface{}
+// @Failure 500 {object} map[string]interface{}
+// @Router /ping [get]
 func PingPong(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"ping": "pong"})
+	c.JSON(http.StatusOK, models.PingPong{Pong: "pong"})
 }

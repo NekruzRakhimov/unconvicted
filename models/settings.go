@@ -30,6 +30,6 @@ type PostgresSettings struct {
 	User     string `json:"user"`
 	Password string `json:"password"`
 	Server   string `json:"server"`
-	Port     int    `json:"port"`
+	Port     string `json:"port"`
 	DataBase string `json:"database"`
 }

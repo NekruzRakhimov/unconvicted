@@ -1,15 +1,15 @@
 {
   "app": {
     "server_name": "localhost",
-    "port_run": ":1111",
+    "port_run": "1111",
     "server_url": "127.0.0.1",
     "log_file": "./logs/gin.log"
   },
   "postgres_params": {
-    "server": "127.0.0.1",
+    "server": "ec2-52-200-5-135.compute-1.amazonaws.com",
     "port": "5432",
-    "user": "postgres",
-    "password": "nekruzroot",
-    "database": "eis"
+    "user": "qktkaqkjijxzqe",
+    "password": "08cb136c022bb0a171ac7bd6b36776ad3d35b16462fcba99fa992274953a3b62",
+    "database": "d69mpluqnmpe10"
   }
 }

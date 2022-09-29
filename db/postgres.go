@@ -2,10 +2,11 @@ package db
 
 import (
 	"fmt"
-	"github.com/NekruzRakhimov/unconvicted/logger"
 	"github.com/NekruzRakhimov/unconvicted/utils"
-	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
+	"gorm.io/driver/postgres"
+	"gorm.io/gorm"
+	"log"
 )
 
 var database *gorm.DB
@@ -13,22 +14,15 @@ var database *gorm.DB
 func initDB() *gorm.DB {
 	settingParams := utils.AppSettings.PostgresParams
 
-	connString := fmt.Sprintf("host=%s port=%d user=%s dbname=%s password=%s sslmode=disable",
-		settingParams.Server,
-		settingParams.Port,
-		settingParams.User,
-		settingParams.DataBase,
+	connString := fmt.Sprintf("host=%s port=%s user=%s dbname=%s password=%s",
+		settingParams.Server, settingParams.Port,
+		settingParams.User, settingParams.DataBase,
 		settingParams.Password)
+	db, err := gorm.Open(postgres.Open(connString), &gorm.Config{})
 
-	db, err := gorm.Open("postgres", connString)
 	if err != nil {
-		logger.Error.Fatal("Couldn't connect to database", err.Error())
+		log.Fatal("Couldn't connect to database", err.Error())
 	}
-
-	// enabling gorm log mode, used for debugging
-	db.LogMode(true)
-
-	db.SingularTable(true)
 
 	return db
 }

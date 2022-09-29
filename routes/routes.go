@@ -2,12 +2,12 @@ package routes
 
 import (
 	"fmt"
+	"github.com/NekruzRakhimov/unconvicted/docs"
 	"github.com/NekruzRakhimov/unconvicted/models"
 	"github.com/NekruzRakhimov/unconvicted/utils"
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
-	"github.com/swaggo/swag/example/basic/docs"
 	"net/http"
 	"os"
 )

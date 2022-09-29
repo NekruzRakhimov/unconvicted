@@ -1,9 +1,9 @@
 package routes
 
 import (
+	"github.com/NekruzRakhimov/unconvicted/utils"
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"unconvicted/utils"
 )
 
 func RunAllRoutes() {

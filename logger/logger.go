@@ -2,13 +2,13 @@ package logger
 
 import (
 	"fmt"
+	"github.com/NekruzRakhimov/unconvicted/utils"
 	"github.com/gin-gonic/gin"
 	"gopkg.in/natefinch/lumberjack.v2"
 	"io"
 	"log"
 	"os"
 	"time"
-	"unconvicted/utils"
 )
 
 // SetLogger Установка Logger-а

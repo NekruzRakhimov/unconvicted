@@ -1,10 +1,10 @@
 package main
 
 import (
-	"unconvicted/db"
-	"unconvicted/logger"
-	"unconvicted/routes"
-	"unconvicted/utils"
+	"github.com/NekruzRakhimov/unconvicted/db"
+	"github.com/NekruzRakhimov/unconvicted/logger"
+	"github.com/NekruzRakhimov/unconvicted/routes"
+	"github.com/NekruzRakhimov/unconvicted/utils"
 )
 
 func main() {

@@ -2,10 +2,10 @@ package db
 
 import (
 	"fmt"
+	"github.com/NekruzRakhimov/unconvicted/logger"
+	"github.com/NekruzRakhimov/unconvicted/utils"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
-	"unconvicted/logger"
-	"unconvicted/utils"
 )
 
 var database *gorm.DB

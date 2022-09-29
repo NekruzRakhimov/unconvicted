@@ -3,9 +3,9 @@ package utils
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/NekruzRakhimov/unconvicted/models"
 	"log"
 	"os"
-	"unconvicted/models"
 )
 
 var AppSettings models.Settings

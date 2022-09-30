@@ -37,6 +37,9 @@ func initAllRoutes(r *gin.Engine) {
 
 	r.POST("/sign-up", controller.SignUp)
 	r.POST("/sign-in", controller.SignIn)
+	r.POST("/reference", controller.CreateReference)
+	//r.POST("/image", controller.SaveImage)
+	r.GET("/image", controller.GetImage)
 
 	api := r.Group("/api", controller.UserIdentity)
 	api.GET("/profile", controller.GetMe)

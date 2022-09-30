@@ -8,7 +8,6 @@ import (
 	"io"
 	"log"
 	"os"
-	"time"
 )
 
 // SetLogger Установка Logger-а
@@ -107,6 +106,7 @@ func Init() {
 	MachineID.SetOutput(lumberLogMachineID)
 }
 
+/*
 // FormatLogs Форматирование логов
 func FormatLogs(r *gin.Engine) {
 	r.Use(gin.LoggerWithFormatter(func(param gin.LogFormatterParams) string {
@@ -124,3 +124,4 @@ func FormatLogs(r *gin.Engine) {
 		)
 	}))
 }
+*/

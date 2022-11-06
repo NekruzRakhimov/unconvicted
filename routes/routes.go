@@ -37,13 +37,14 @@ func initAllRoutes(r *gin.Engine) {
 	docs.SwaggerInfo.BasePath = "/"
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
-	r.POST("/sign-up", controller.SignUp)
-	r.POST("/sign-in", controller.SignIn)
-	r.POST("/reference", controller.CreateReference)
 	//r.POST("/image", controller.SaveImage)
 	r.GET("/image", controller.GetImage)
 
-	api := r.Group("/api", controller.UserIdentity)
-	api.GET("/profile", controller.GetMe)
-	api.GET("/reference", controller.GetMyReferences)
+	api := r.Group("/api")
+	api.POST("/auth/sign-up", controller.SignUp)
+	api.POST("/auth/sign-in", controller.SignIn)
+	api.GET("/auth/me", controller.UserIdentity, controller.GetMe)
+	api.POST("/reference", controller.CreateReference)
+
+	api.GET("/reference", controller.UserIdentity, controller.GetMyReferences)
 }

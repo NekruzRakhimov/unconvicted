@@ -16,6 +16,8 @@ func RunAllRoutes() {
 
 	r := gin.Default()
 
+	r.Use(controller.CORSMiddleware())
+
 	// Статус код 500, при любых panic()
 	r.Use(gin.Recovery())
 
@@ -43,4 +45,5 @@ func initAllRoutes(r *gin.Engine) {
 
 	api := r.Group("/api", controller.UserIdentity)
 	api.GET("/profile", controller.GetMe)
+	api.GET("/reference", controller.GetMyReferences)
 }

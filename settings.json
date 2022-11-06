@@ -6,10 +6,10 @@
     "log_file": "./logs/gin.log"
   },
   "postgres_params": {
-    "server": "ec2-52-200-5-135.compute-1.amazonaws.com",
+    "server": "ec2-54-147-36-107.compute-1.amazonaws.com",
     "port": "5432",
-    "user": "qktkaqkjijxzqe",
-    "password": "08cb136c022bb0a171ac7bd6b36776ad3d35b16462fcba99fa992274953a3b62",
-    "database": "d69mpluqnmpe10"
+    "user": "ztkdyqmtexukye",
+    "password": "f7de3d9cc0a2a688db04a36ae22cbd31d7b09680d47faf96a5af923e90c4347d",
+    "database": "d1ndtq08mm6jnb"
   }
 }

@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"github.com/NekruzRakhimov/unconvicted/logger"
 	"github.com/NekruzRakhimov/unconvicted/models"
+	"github.com/NekruzRakhimov/unconvicted/pkg/service"
 	"github.com/NekruzRakhimov/unconvicted/utils"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -55,5 +56,26 @@ func CreateReference(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, reference)
+	if err = service.CreateReference(reference); err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"reason": err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"reason": "Запись успешно создана"})
+}
+
+func GetMyReferences(c *gin.Context) {
+	userID, err := getUserID(c)
+	if err != nil {
+		c.JSON(http.StatusUnauthorized, gin.H{"reason": err.Error()})
+		return
+	}
+
+	r, err := service.GetMyReference(userID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"reason": err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, r)
 }

@@ -11,14 +11,14 @@ import (
 func SaveImage(c *gin.Context, key string) (string, error) {
 	file, err := c.FormFile(key)
 	if err != nil {
-		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
+		logger.Error.Printf("1. [%s] Error is: %s\n", utils.FuncName(), err.Error())
 		return "", err
 	}
 
 	filename := fmt.Sprintf("images/%s_%s", utils.RandomString(5), file.Filename)
 	err = c.SaveUploadedFile(file, filename)
 	if err != nil {
-		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
+		logger.Error.Printf("2. [%s] Error is: %s\n", utils.FuncName(), err.Error())
 		return "", err
 	}
 

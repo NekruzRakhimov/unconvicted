@@ -1,6 +1,7 @@
 package service
 
 import (
+	"github.com/NekruzRakhimov/unconvicted/logger"
 	"github.com/NekruzRakhimov/unconvicted/models"
 	"github.com/NekruzRakhimov/unconvicted/pkg/repository"
 )
@@ -14,6 +15,8 @@ func GetMyReference(userID int) (r []models.Reference, err error) {
 	if err != nil {
 		return nil, err
 	}
+
+	logger.Debug.Println(u)
 
 	r, err = repository.GetMyReferences(u.Email)
 	if err != nil {

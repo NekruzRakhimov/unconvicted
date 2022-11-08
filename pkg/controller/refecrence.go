@@ -38,21 +38,21 @@ func CreateReference(c *gin.Context) {
 	reference.PassportBack, err = SaveImage(c, "passport_back")
 	if err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
-		c.JSON(http.StatusBadRequest, gin.H{"reason": "json field not found"})
+		c.JSON(http.StatusBadRequest, gin.H{"reason": "passport_back field not found"})
 		return
 	}
 
 	reference.PassportSelfie, err = SaveImage(c, "passport_selfie")
 	if err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
-		c.JSON(http.StatusBadRequest, gin.H{"reason": "json field not found"})
+		c.JSON(http.StatusBadRequest, gin.H{"reason": "passport_selfie field not found"})
 		return
 	}
 
 	reference.PassportBack, err = SaveImage(c, "payment_receipt")
 	if err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
-		c.JSON(http.StatusBadRequest, gin.H{"reason": "json field not found"})
+		c.JSON(http.StatusBadRequest, gin.H{"reason": "payment_receipt field not found"})
 		return
 	}
 
@@ -70,6 +70,8 @@ func GetMyReferences(c *gin.Context) {
 		c.JSON(http.StatusUnauthorized, gin.H{"reason": err.Error()})
 		return
 	}
+
+	logger.Debug.Println(userID)
 
 	r, err := service.GetMyReference(userID)
 	if err != nil {

@@ -4,6 +4,7 @@ go 1.17
 
 require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
+	github.com/gin-contrib/cors v1.4.0
 	github.com/gin-gonic/gin v1.8.1
 	github.com/jinzhu/gorm v1.9.16
 	github.com/swaggo/files v0.0.0-20220728132757-551d4a08d97a

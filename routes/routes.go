@@ -5,7 +5,6 @@ import (
 	"github.com/NekruzRakhimov/unconvicted/docs"
 	"github.com/NekruzRakhimov/unconvicted/pkg/controller"
 	"github.com/NekruzRakhimov/unconvicted/utils"
-	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
@@ -17,9 +16,9 @@ func RunAllRoutes() {
 
 	r := gin.Default()
 
-	r.Use(cors.Default())
+	//r.Use(cors.Default())
 
-	//r.Use(controller.CORSMiddleware())
+	r.Use(controller.CORSMiddleware())
 
 	// Статус код 500, при любых panic()
 	r.Use(gin.Recovery())

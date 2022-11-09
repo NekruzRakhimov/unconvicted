@@ -1,0 +1,34 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555

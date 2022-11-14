@@ -25,3 +25,11 @@ func GetMyReference(userID int) (r []models.Reference, err error) {
 
 	return r, nil
 }
+
+func GetReferenceByID(id int) (r models.Reference, err error) {
+	return repository.GetReferenceByID(id)
+}
+
+func ChangeReferenceStatus(id int, status string) error {
+	return repository.ChangeReferenceStatus(id, status)
+}

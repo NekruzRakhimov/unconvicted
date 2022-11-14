@@ -49,4 +49,7 @@ func initAllRoutes(r *gin.Engine) {
 	api.POST("/reference", controller.CreateReference)
 
 	api.GET("/reference", controller.UserIdentity, controller.GetMyReferences)
+	api.GET("/reference/:id", controller.UserIdentity, controller.GetReferenceByID)
+	api.PUT("/reference/:id", controller.UserIdentity, controller.ChangeReferenceStatus)
+
 }

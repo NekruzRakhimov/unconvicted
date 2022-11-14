@@ -15,4 +15,5 @@ type Reference struct {
 	PaymentReceipt     string `json:"payment_receipt"`
 	ReferenceLanguage  string `json:"reference_language"`
 	ReferenceTariff    string `json:"reference_tariff"`
+	Status             string `json:"status"`
 }

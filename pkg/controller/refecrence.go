@@ -8,6 +8,7 @@ import (
 	"github.com/NekruzRakhimov/unconvicted/utils"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"strconv"
 )
 
 func CreateReference(c *gin.Context) {
@@ -80,4 +81,36 @@ func GetMyReferences(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, r)
+}
+
+func GetReferenceByID(c *gin.Context) {
+	id, err := strconv.Atoi(c.Param("id"))
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"reason": "id not found"})
+		return
+	}
+
+	r, err := service.GetReferenceByID(id)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"reason": err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, r)
+}
+
+func ChangeReferenceStatus(c *gin.Context) {
+	id, err := strconv.Atoi(c.Param("id"))
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"reason": "id not found"})
+		return
+	}
+
+	status := c.Query("status")
+	if err := service.ChangeReferenceStatus(id, status); err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"reason": err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"reason": "статус успешно изменен"})
 }

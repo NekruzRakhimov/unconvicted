@@ -24,6 +24,10 @@ func GetUser(email, password string) (user models.User, err error) {
 		return models.User{}, errors.New("что-то пошло не так(")
 	}
 
+	if user.ID == 0 {
+		return models.User{}, errors.New("неправильный логин или пароль")
+	}
+
 	return
 }
 

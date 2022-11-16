@@ -2,3 +2,7 @@
 2022/11/14 23:33:31.572951 [github.com/NekruzRakhimov/unconvicted/pkg/controller.UserIdentity] Error is: empty auth header
 2022/11/14 23:33:41.113317 [github.com/NekruzRakhimov/unconvicted/pkg/controller.UserIdentity] Error is: empty auth header
 2022/11/14 23:34:00.494774 [github.com/NekruzRakhimov/unconvicted/pkg/controller.UserIdentity] Error is: empty auth header
+2022/11/16 17:23:24.018812 [github.com/NekruzRakhimov/unconvicted/pkg/controller.UserIdentity] Error is: empty auth header
+2022/11/16 17:23:24.019365 [github.com/NekruzRakhimov/unconvicted/pkg/controller.getUserID] Error is: user id not found
+2022/11/16 17:46:12.914690 [github.com/NekruzRakhimov/unconvicted/pkg/controller.UserIdentity] Error is: empty auth header
+2022/11/16 17:46:12.915365 [github.com/NekruzRakhimov/unconvicted/pkg/controller.getUserID] Error is: user id not found

@@ -49,3 +49,11 @@ func CreateUser(user models.User) error {
 
 	return nil
 }
+
+func EditProfileInfo(user models.User) error {
+	if err := db.GetDBConn().Table("users").Save(user).Error; err != nil {
+		return err
+	}
+
+	return nil
+}

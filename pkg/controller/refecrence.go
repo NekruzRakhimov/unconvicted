@@ -114,3 +114,32 @@ func ChangeReferenceStatus(c *gin.Context) {
 
 	c.JSON(http.StatusOK, gin.H{"reason": "статус успешно изменен"})
 }
+
+func GetAllReferences(c *gin.Context) {
+	userID, err := getUserID(c)
+	if err != nil {
+		c.JSON(http.StatusUnauthorized, gin.H{"reason": err.Error()})
+		return
+	}
+
+	user, err := service.GetUserByID(userID)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"reason": err.Error()})
+		return
+	}
+
+	if !user.IsAdmin || !user.IsSuperAdmin {
+		c.JSON(http.StatusForbidden, gin.H{"reason": "у вас нет необходимых прав"})
+		return
+	}
+
+	logger.Debug.Println(userID)
+
+	r, err := service.GetAllReferences()
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"reason": err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, r)
+}

@@ -29,6 +29,15 @@ func GetMyReferences(email string) (r []models.Reference, err error) {
 	return r, nil
 }
 
+func GetAllReferences() (r []models.Reference, err error) {
+	sqlQuery := "SELECT * FROM \"references\""
+	if err = db.GetDBConn().Raw(sqlQuery).Scan(&r).Error; err != nil {
+		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
+		return nil, errors.New("ошибка во время получения данных")
+	}
+	return r, nil
+}
+
 func GetReferenceByID(id int) (r models.Reference, err error) {
 	sqlQuery := "SELECT * FROM \"references\" WHERE id = ?"
 	if err = db.GetDBConn().Raw(sqlQuery, id).Scan(&r).Error; err != nil {

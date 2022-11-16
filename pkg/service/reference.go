@@ -26,6 +26,15 @@ func GetMyReference(userID int) (r []models.Reference, err error) {
 	return r, nil
 }
 
+func GetAllReferences() (r []models.Reference, err error) {
+	r, err = repository.GetAllReferences()
+	if err != nil {
+		return nil, err
+	}
+
+	return r, nil
+}
+
 func GetReferenceByID(id int) (r models.Reference, err error) {
 	return repository.GetReferenceByID(id)
 }

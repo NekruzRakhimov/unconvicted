@@ -46,10 +46,15 @@ func initAllRoutes(r *gin.Engine) {
 	api.POST("/auth/sign-up", controller.SignUp)
 	api.POST("/auth/sign-in", controller.SignIn)
 	api.GET("/auth/me", controller.UserIdentity, controller.GetMe)
+	api.PUT("/auth/me", controller.UserIdentity, controller.EditProfileInfo)
 	api.POST("/reference", controller.CreateReference)
 
 	api.GET("/reference", controller.UserIdentity, controller.GetMyReferences)
 	api.GET("/reference/:id", controller.UserIdentity, controller.GetReferenceByID)
 	api.PUT("/reference/:id", controller.UserIdentity, controller.ChangeReferenceStatus)
 
+	admin := api.Group("/admin")
+	admin.GET("/reference", controller.UserIdentity, controller.GetAllReferences)
+	admin.GET("/", controller.UserIdentity, controller.GetAllAdmins)
+	admin.POST("/", controller.UserIdentity, controller.CreateAdmin)
 }

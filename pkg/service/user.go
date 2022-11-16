@@ -39,3 +39,9 @@ func CreateUser(user models.User) error {
 func GetUserByID(id int) (models.User, error) {
 	return repository.GetUserByID(id)
 }
+
+func EditProfileInfo(id int, user models.User) error {
+	user.ID = id
+	user.Password = utils.GenerateHash(user.Password)
+	return repository.EditProfileInfo(user)
+}

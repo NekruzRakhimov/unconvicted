@@ -22,7 +22,13 @@ func SignUp(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"reason": "пользователь успешно зарегистрирован"})
+	token, err := service.GenerateToken(user.Email, user.Password)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"reason": err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"access_token": token})
 }
 
 func SignIn(c *gin.Context) {

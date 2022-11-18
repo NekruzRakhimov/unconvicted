@@ -7,6 +7,7 @@ import (
 )
 
 func CreateReference(r models.Reference) error {
+	r.Status = "На рассмотрении"
 	return repository.CreateReference(r)
 }
 

@@ -339,3 +339,196 @@ Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-
 [GIN] 2022/11/16 - 17:56:09 | 200 |  604.188042ms |             ::1 | GET      "/api/admin/"
 [GIN-debug] redirecting request 307: /api/admin/ --> /api/admin/
 [GIN] 2022/11/16 - 17:56:16 | 500 |  400.565417ms |             ::1 | POST     "/api/admin/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] PUT    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.EditProfileInfo (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] GET    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceByID (6 handlers)
+[GIN-debug] PUT    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.ChangeReferenceStatus (6 handlers)
+[GIN-debug] GET    /api/admin/reference      --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllReferences (6 handlers)
+[GIN-debug] GET    /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllAdmins (6 handlers)
+[GIN-debug] POST   /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555
+[GIN] 2022/11/17 - 21:00:09 | 200 |     1.541482s |             ::1 | POST     "/api/auth/sign-up"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] PUT    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.EditProfileInfo (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] GET    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceByID (6 handlers)
+[GIN-debug] PUT    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.ChangeReferenceStatus (6 handlers)
+[GIN-debug] GET    /api/admin/reference      --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllReferences (6 handlers)
+[GIN-debug] GET    /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllAdmins (6 handlers)
+[GIN-debug] POST   /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555
+[GIN] 2022/11/18 - 00:37:52 | 500 |  645.274042ms |             ::1 | POST     "/api/auth/sign-in"
+[GIN] 2022/11/18 - 00:37:57 | 200 |     307.259ms |             ::1 | POST     "/api/auth/sign-in"
+[GIN] 2022/11/18 - 00:38:23 | 403 |  560.780291ms |             ::1 | POST     "/api/auth/sign-in?admin_panel=true"
+[GIN] 2022/11/18 - 00:38:29 | 200 |  298.830875ms |             ::1 | POST     "/api/auth/sign-in?admin_panel=false"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] PUT    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.EditProfileInfo (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] GET    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceByID (6 handlers)
+[GIN-debug] PUT    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.ChangeReferenceStatus (6 handlers)
+[GIN-debug] GET    /api/admin/reference      --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllReferences (6 handlers)
+[GIN-debug] GET    /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllAdmins (6 handlers)
+[GIN-debug] POST   /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555
+[GIN] 2022/11/18 - 00:40:10 | 200 |  619.642292ms |             ::1 | GET      "/api/auth/me"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] PUT    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.EditProfileInfo (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] GET    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceByID (6 handlers)
+[GIN-debug] PUT    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.ChangeReferenceStatus (6 handlers)
+[GIN-debug] GET    /api/admin/reference      --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllReferences (6 handlers)
+[GIN-debug] GET    /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllAdmins (6 handlers)
+[GIN-debug] POST   /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] PUT    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.EditProfileInfo (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] GET    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceByID (6 handlers)
+[GIN-debug] PUT    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.ChangeReferenceStatus (6 handlers)
+[GIN-debug] GET    /api/admin/reference      --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllReferences (6 handlers)
+[GIN-debug] GET    /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllAdmins (6 handlers)
+[GIN-debug] POST   /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] PUT    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.EditProfileInfo (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] GET    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceByID (6 handlers)
+[GIN-debug] PUT    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.ChangeReferenceStatus (6 handlers)
+[GIN-debug] GET    /api/admin/reference      --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllReferences (6 handlers)
+[GIN-debug] GET    /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllAdmins (6 handlers)
+[GIN-debug] POST   /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] PUT    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.EditProfileInfo (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] GET    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceByID (6 handlers)
+[GIN-debug] PUT    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.ChangeReferenceStatus (6 handlers)
+[GIN-debug] GET    /api/admin/reference      --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllReferences (6 handlers)
+[GIN-debug] GET    /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllAdmins (6 handlers)
+[GIN-debug] POST   /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555
+[GIN] 2022/11/18 - 09:31:34 | 400 |   21.940083ms |             ::1 | POST     "/api/reference"
+[GIN] 2022/11/18 - 09:32:49 | 500 |  1.217156125s |             ::1 | POST     "/api/reference"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] PUT    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.EditProfileInfo (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] GET    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceByID (6 handlers)
+[GIN-debug] PUT    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.ChangeReferenceStatus (6 handlers)
+[GIN-debug] GET    /api/admin/reference      --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllReferences (6 handlers)
+[GIN-debug] GET    /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllAdmins (6 handlers)
+[GIN-debug] POST   /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555
+[GIN] 2022/11/18 - 09:33:30 | 200 |     1.737746s |             ::1 | POST     "/api/reference"

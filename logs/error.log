@@ -6,3 +6,6 @@
 2022/11/16 17:23:24.019365 [github.com/NekruzRakhimov/unconvicted/pkg/controller.getUserID] Error is: user id not found
 2022/11/16 17:46:12.914690 [github.com/NekruzRakhimov/unconvicted/pkg/controller.UserIdentity] Error is: empty auth header
 2022/11/16 17:46:12.915365 [github.com/NekruzRakhimov/unconvicted/pkg/controller.getUserID] Error is: user id not found
+2022/11/18 09:31:34.858074 1. [github.com/NekruzRakhimov/unconvicted/pkg/controller.SaveImage] Error is: http: no such file
+2022/11/18 09:31:34.875107 [github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference] Error is: http: no such file
+2022/11/18 09:32:49.273748 [github.com/NekruzRakhimov/unconvicted/pkg/repository.CreateReference] Error is: ERROR: invalid input syntax for type timestamp with time zone: "" (SQLSTATE 22007)

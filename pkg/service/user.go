@@ -40,6 +40,10 @@ func GetUserByID(id int) (models.User, error) {
 	return repository.GetUserByID(id)
 }
 
+func GetUserByEmail(email string) (models.User, error) {
+	return repository.GetUserByEmail(email)
+}
+
 func EditProfileInfo(id int, user models.User) error {
 	user.ID = id
 	user.Password = utils.GenerateHash(user.Password)

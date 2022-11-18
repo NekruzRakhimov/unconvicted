@@ -10,7 +10,7 @@ import (
 )
 
 func CreateReference(r models.Reference) error {
-	if err := db.GetDBConn().Table("references").Create(&r).Error; err != nil {
+	if err := db.GetDBConn().Table("references").Omit("created_at").Create(&r).Error; err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
 		return errors.New("ошибка во время создания записи")
 	}

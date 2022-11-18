@@ -20,7 +20,7 @@ func CreateReference(r models.Reference) error {
 
 func GetMyReferences(email string) (r []models.Reference, err error) {
 	fmt.Println(email)
-	sqlQuery := "SELECT * FROM \"references\" WHERE email = ?"
+	sqlQuery := "SELECT * FROM \"references\" WHERE email = ? ORDER BY id"
 	if err = db.GetDBConn().Raw(sqlQuery, email).Scan(&r).Error; err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
 		return nil, errors.New("ошибка во время получения данных")

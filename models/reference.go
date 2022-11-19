@@ -17,4 +17,5 @@ type Reference struct {
 	ReferenceTariff    string `json:"reference_tariff"`
 	Status             string `json:"status"`
 	CreatedAt          string `json:"created_at"`
+	ReceivingRegion    string `json:"receiving_region"`
 }

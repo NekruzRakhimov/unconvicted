@@ -5,6 +5,7 @@ import (
 	"github.com/NekruzRakhimov/unconvicted/pkg/service"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"strconv"
 )
 
 func GetAllAdmins(c *gin.Context) {
@@ -64,4 +65,25 @@ func CreateAdmin(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{"reason": "новый модератор успешно создан"})
+}
+
+func DeleteAdmin(c *gin.Context) {
+	_, err := getUserID(c)
+	if err != nil {
+		c.JSON(http.StatusUnauthorized, gin.H{"reason": err.Error()})
+		return
+	}
+
+	id, err := strconv.Atoi(c.Param("id"))
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"reason": "id not found"})
+		return
+	}
+
+	if err = service.DeleteAdmin(id); err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"reason": err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{"reason": "пользователь успешно удален"})
 }

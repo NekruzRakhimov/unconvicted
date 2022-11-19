@@ -42,7 +42,7 @@ func GetUserByID(id int) (user models.User, err error) {
 }
 
 func CreateUser(user models.User) error {
-	if err := db.GetDBConn().Table("users").Create(&user).Error; err != nil {
+	if err := db.GetDBConn().Table("users").Omit("old_password").Create(&user).Error; err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
 		return errors.New("что-то пошло не так(")
 	}
@@ -51,7 +51,7 @@ func CreateUser(user models.User) error {
 }
 
 func EditProfileInfo(user models.User) error {
-	if err := db.GetDBConn().Table("users").Save(user).Error; err != nil {
+	if err := db.GetDBConn().Table("users").Omit("old_password").Save(user).Error; err != nil {
 		return err
 	}
 

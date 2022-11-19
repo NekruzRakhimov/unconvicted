@@ -24,3 +24,7 @@ func CreateNewAdmin(admin models.User) (err error) {
 	admin.Password = utils.GenerateHash(admin.Password)
 	return repository.CreateNewAdmin(admin)
 }
+
+func DeleteAdmin(id int) error {
+	return repository.DeleteAdmin(id)
+}

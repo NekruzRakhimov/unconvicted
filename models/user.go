@@ -8,4 +8,5 @@ type User struct {
 	EmailConfirmed bool   `json:"email_confirmed"`
 	IsAdmin        bool   `json:"is_admin"`
 	IsSuperAdmin   bool   `json:"-"`
+	OldPassword    string `json:"old_password"`
 }

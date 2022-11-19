@@ -115,6 +115,16 @@ func ChangeReferenceStatus(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"reason": "статус успешно изменен"})
 }
 
+func GetReferenceTemplate(c *gin.Context) {
+	_, err := strconv.Atoi(c.Param("id"))
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"reason": "id not found"})
+		return
+	}
+
+	c.File("./files/template.doc")
+}
+
 func GetAllReferences(c *gin.Context) {
 	userID, err := getUserID(c)
 	if err != nil {

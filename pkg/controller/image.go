@@ -26,8 +26,10 @@ func SaveImage(c *gin.Context, key string) (string, error) {
 }
 
 func GetImage(c *gin.Context) {
-	f := c.Query("path")
+	f := c.Param("path")
+	fmt.Println(f)
 	extension := filepath.Ext(f)
+	fmt.Println(1)
 	switch extension {
 	case ".jpg":
 		c.Writer.Header().Set("Content-Type", "image/jpeg")
@@ -36,5 +38,8 @@ func GetImage(c *gin.Context) {
 	case ".pdf":
 		c.Writer.Header().Set("Content-Type", "application/pdf")
 	}
-	c.File(f)
+	fmt.Println(2)
+	c.File(fmt.Sprintf("images/%s/", "0f800_test.png"))
+	//c.JSON(http.StatusOK, "ok")
+	//c.File("files/template.doc")
 }

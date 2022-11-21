@@ -43,6 +43,7 @@ func initAllRoutes(r *gin.Engine) {
 	r.GET("/image", controller.GetImage)
 
 	api := r.Group("/api")
+	api.GET("/images/:path", controller.GetImage)
 	api.POST("/auth/sign-up", controller.SignUp)
 	api.POST("/auth/sign-in", controller.SignIn)
 	api.GET("/auth/me", controller.UserIdentity, controller.GetMe)

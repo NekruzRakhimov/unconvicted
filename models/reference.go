@@ -2,8 +2,7 @@ package models
 
 type Reference struct {
 	ID                 int    `json:"id"`
-	Name               string `json:"name"`
-	Surname            string `json:"surname"`
+	FullName           string `json:"full_name"`
 	PhoneNumber        string `json:"phone_number"`
 	Email              string `json:"email"`
 	BirthDate          string `json:"birth_date"`

@@ -15,6 +15,7 @@ type Reference struct {
 	ReferenceLanguage  string `json:"reference_language"`
 	ReferenceTariff    string `json:"reference_tariff"`
 	Status             string `json:"status"`
+	StatusType         string `json:"status_type"`
 	Comment            string `json:"comment"`
 	CreatedAt          string `json:"created_at"`
 	ReceivingRegion    string `json:"receiving_region"`

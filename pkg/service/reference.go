@@ -28,13 +28,13 @@ func GetMyReference(userID int) (r []models.Reference, err error) {
 	return r, nil
 }
 
-func GetAllReferences() (r []models.Reference, err error) {
-	r, err = repository.GetAllReferences()
+func GetAllReferences(page, limit int, search, status, tariff string) (r []models.Reference, lastPage int, err error) {
+	r, lastPage, err = repository.GetAllReferences(page, limit, search, status, tariff)
 	if err != nil {
-		return nil, err
+		return nil, 0, err
 	}
 
-	return r, nil
+	return r, lastPage, nil
 }
 
 func GetReferenceByID(id int) (r models.Reference, err error) {

@@ -29,13 +29,38 @@ func GetMyReferences(email string) (r []models.Reference, err error) {
 	return r, nil
 }
 
-func GetAllReferences() (r []models.Reference, err error) {
-	sqlQuery := "SELECT * FROM \"references\""
+func GetAllReferences(page, limit int, search, status, tariff string) (r []models.Reference, lastPage int, err error) {
+	sqlQuery := "SELECT * FROM \"references\" WHERE true "
+	if search != "" {
+		sqlQuery += " AND full_name like '%" + search + "%'"
+	}
+
+	if status != "" {
+		sqlQuery += fmt.Sprintf(" AND status_type = '%s'", status)
+	}
+
+	if tariff != "" {
+		sqlQuery += fmt.Sprintf(" AND reference_tariff = '%s'", tariff)
+	}
 	if err = db.GetDBConn().Raw(sqlQuery).Scan(&r).Error; err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
-		return nil, errors.New("ошибка во время получения данных")
+		return nil, 0, errors.New("ошибка во время получения данных")
 	}
-	return r, nil
+
+	fmt.Println(len(r)%limit != 0)
+	lastPage = len(r) / limit
+	if len(r)%limit != 0 {
+		lastPage++
+		fmt.Println("here", lastPage)
+	}
+
+	sqlQuery += fmt.Sprintf(" ORDER BY id OFFSET %d LIMIT %d", page-1, limit)
+
+	if err = db.GetDBConn().Raw(sqlQuery).Scan(&r).Error; err != nil {
+		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
+		return nil, 0, errors.New("ошибка во время получения данных")
+	}
+	return r, lastPage, nil
 }
 
 func GetReferenceByID(id int) (r models.Reference, err error) {

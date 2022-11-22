@@ -12,3 +12,8 @@
 2022/11/19 15:30:36.135360 [github.com/NekruzRakhimov/unconvicted/pkg/controller.UserIdentity] Error is: empty auth header
 2022/11/19 15:55:26.714448 [github.com/NekruzRakhimov/unconvicted/pkg/controller.UserIdentity] Error is: empty auth header
 2022/11/19 15:55:26.717176 [github.com/NekruzRakhimov/unconvicted/pkg/controller.getUserID] Error is: user id not found
+2022/11/22 15:42:50.815464 [github.com/NekruzRakhimov/unconvicted/pkg/repository.GetAllReferences] Error is: ERROR: syntax error at or near "BY" (SQLSTATE 42601)
+2022/11/22 15:44:01.462121 [github.com/NekruzRakhimov/unconvicted/pkg/repository.GetAllReferences] Error is: ERROR: column "status_type" does not exist (SQLSTATE 42703)
+2022/11/22 15:45:46.284647 [github.com/NekruzRakhimov/unconvicted/pkg/repository.GetAllReferences] Error is: ERROR: column "status_type" does not exist (SQLSTATE 42703)
+2022/11/22 15:46:22.514481 [github.com/NekruzRakhimov/unconvicted/pkg/repository.GetAllReferences] Error is: ERROR: column "status_type" does not exist (SQLSTATE 42703)
+2022/11/22 15:49:56.864955 [github.com/NekruzRakhimov/unconvicted/pkg/repository.GetAllReferences] Error is: ERROR: syntax error at or near "%" (SQLSTATE 42601)

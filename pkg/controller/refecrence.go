@@ -135,6 +135,22 @@ func GetAllReferences(c *gin.Context) {
 		return
 	}
 
+	page, err := strconv.Atoi(c.Query("page"))
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"reason": err.Error()})
+		return
+	}
+
+	limit, err := strconv.Atoi(c.Query("per_page"))
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"reason": err.Error()})
+		return
+	}
+
+	search := c.Query("search")
+	status := c.Query("status")
+	tariff := c.Query("tariff")
+
 	user, err := service.GetUserByID(userID)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"reason": err.Error()})
@@ -148,11 +164,14 @@ func GetAllReferences(c *gin.Context) {
 
 	logger.Debug.Println(userID)
 
-	r, err := service.GetAllReferences()
+	r, lastPage, err := service.GetAllReferences(page, limit, search, status, tariff)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"reason": err.Error()})
 		return
 	}
 
-	c.JSON(http.StatusOK, r)
+	c.JSON(http.StatusOK, gin.H{
+		"references": r,
+		"last_page":  lastPage,
+	})
 }

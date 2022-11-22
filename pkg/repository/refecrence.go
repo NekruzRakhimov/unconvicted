@@ -48,9 +48,9 @@ func GetReferenceByID(id int) (r models.Reference, err error) {
 	return r, nil
 }
 
-func ChangeReferenceStatus(id int, status string) error {
-	sqlQuery := "UPDATE \"references\" set status = ? WHERE id = ?"
-	if err := db.GetDBConn().Exec(sqlQuery, status, id).Error; err != nil {
+func ChangeReferenceStatus(id int, comment, status string) error {
+	sqlQuery := "UPDATE \"references\" set \"status\" = ?, \"comment\" = ? WHERE id = ?"
+	if err := db.GetDBConn().Exec(sqlQuery, status, comment, id).Error; err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
 		return errors.New("ошибка во время получения данных")
 	}

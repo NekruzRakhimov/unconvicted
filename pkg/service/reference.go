@@ -40,6 +40,6 @@ func GetReferenceByID(id int) (r models.Reference, err error) {
 	return repository.GetReferenceByID(id)
 }
 
-func ChangeReferenceStatus(id int, status string) error {
-	return repository.ChangeReferenceStatus(id, status)
+func ChangeReferenceStatus(id int, status string, comment string) error {
+	return repository.ChangeReferenceStatus(id, comment, status)
 }

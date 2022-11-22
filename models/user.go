@@ -7,6 +7,6 @@ type User struct {
 	Password       string `json:"password"`
 	EmailConfirmed bool   `json:"email_confirmed"`
 	IsAdmin        bool   `json:"is_admin"`
-	IsSuperAdmin   bool   `json:"-"`
+	IsSuperAdmin   bool   `json:"is_super_admin"`
 	OldPassword    string `json:"old_password"`
 }

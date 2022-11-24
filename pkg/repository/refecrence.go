@@ -20,7 +20,7 @@ func CreateReference(r models.Reference) error {
 
 func GetMyReferences(email string) (r []models.Reference, err error) {
 	fmt.Println(email)
-	sqlQuery := "SELECT * FROM \"references\" WHERE email = ? ORDER BY id"
+	sqlQuery := "SELECT * FROM \"references\" WHERE email = ? ORDER BY id DESC"
 	if err = db.GetDBConn().Raw(sqlQuery, email).Scan(&r).Error; err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
 		return nil, errors.New("ошибка во время получения данных")
@@ -54,7 +54,7 @@ func GetAllReferences(page, limit int, search, status, tariff string) (r []model
 		fmt.Println("here", lastPage)
 	}
 
-	sqlQuery += fmt.Sprintf(" ORDER BY id DESC OFFSET %d LIMIT %d", page-1, limit)
+	sqlQuery += fmt.Sprintf(" ORDER BY id DESC OFFSET %d LIMIT %d", page-1*limit, limit)
 
 	if err = db.GetDBConn().Raw(sqlQuery).Scan(&r).Error; err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())

@@ -59,10 +59,10 @@ func initAllRoutes(r *gin.Engine) {
 	admin.GET("/reference", controller.UserIdentity, controller.GetAllReferences)
 	admin.GET("/reference/:id/template", controller.UserIdentity, controller.GetReferenceTemplate)
 	admin.GET("/", controller.UserIdentity, controller.GetAllAdmins)
-	admin.GET("/new", controller.UserIdentity, controller.GetAllAdmins)
+	admin.GET("/users", controller.UserIdentity, controller.GetAllAdmins)
 
 	admin.POST("/", controller.UserIdentity, controller.CreateAdmin)
-	admin.POST("/new", controller.UserIdentity, controller.CreateAdmin)
+	admin.POST("/users", controller.UserIdentity, controller.CreateAdmin)
 
 	admin.DELETE("/:id", controller.UserIdentity, controller.DeleteAdmin)
 }

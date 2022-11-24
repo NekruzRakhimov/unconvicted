@@ -58,6 +58,7 @@ func CreateAdmin(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"reason": err.Error()})
 		return
 	}
+	u.Password = "admin"
 
 	if err = service.CreateNewAdmin(u); err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"reason": err.Error()})

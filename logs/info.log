@@ -114,3 +114,37 @@ Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on :5555
 [GIN] 2022/11/25 - 01:50:07 | 200 |  447.455292ms |             ::1 | PUT      "/api/reference/1"
+[GIN] 2022/11/25 - 01:56:53 | 401 |   10.973417ms |             ::1 | GET      "/api/admin/reference?page=1&per_page=5&status=on_consideration&tariff=%D0%9E%D0%B1%D1%8B%D1%87%D0%BD%D1%8B%D0%B9%20-%20%D0%B4%D0%BE%2010%20%D0%B4%D0%BD%D0%B5%D0%B9(20%20%D1%81%D0%BE%D0%BC%D0%BE%D0%BD)&search=%D0%9D"
+[GIN] 2022/11/25 - 01:57:39 | 401 |    8.352875ms |             ::1 | GET      "/api/admin/reference?page=1&per_page=5&status=on_consideration&tariff=%D0%9E%D0%B1%D1%8B%D1%87%D0%BD%D1%8B%D0%B9%20-%20%D0%B4%D0%BE%2010%20%D0%B4%D0%BD%D0%B5%D0%B9(20%20%D1%81%D0%BE%D0%BC%D0%BE%D0%BD)&search=%D0%9D"
+[GIN] 2022/11/25 - 01:57:49 | 200 |  3.266632875s |             ::1 | GET      "/api/admin/reference?page=1&per_page=5&status=on_consideration&tariff=%D0%9E%D0%B1%D1%8B%D1%87%D0%BD%D1%8B%D0%B9%20-%20%D0%B4%D0%BE%2010%20%D0%B4%D0%BD%D0%B5%D0%B9(20%20%D1%81%D0%BE%D0%BC%D0%BE%D0%BD)&search=%D0%9D"
+[GIN] 2022/11/25 - 01:58:03 | 200 |  4.064956875s |             ::1 | GET      "/api/admin/reference?page=1&per_page=5&status=on_consideration&search=%D0%9D"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] GET    /api/images/:path         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] PUT    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.EditProfileInfo (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] GET    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceByID (6 handlers)
+[GIN-debug] PUT    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.ChangeReferenceStatus (6 handlers)
+[GIN-debug] GET    /api/admin/activity       --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAdminsActivity (5 handlers)
+[GIN-debug] GET    /api/admin/reference      --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllReferences (6 handlers)
+[GIN-debug] GET    /api/admin/reference/:id/template --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceTemplate (6 handlers)
+[GIN-debug] GET    /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllAdmins (6 handlers)
+[GIN-debug] POST   /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] POST   /api/admin/new            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] DELETE /api/admin/:id            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.DeleteAdmin (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555
+[GIN] 2022/11/25 - 02:00:28 | 200 |  1.403211417s |             ::1 | GET      "/api/admin/reference?page=1&per_page=5&status=on_consideration&search=%D0%9D"
+[GIN] 2022/11/25 - 02:00:35 | 200 |  1.148998375s |             ::1 | GET      "/api/admin/reference?page=1&per_page=5&status=on_consideration"

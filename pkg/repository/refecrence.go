@@ -54,7 +54,7 @@ func GetAllReferences(page, limit int, search, status, tariff string) (r []model
 		fmt.Println("here", lastPage)
 	}
 
-	sqlQuery += fmt.Sprintf(" ORDER BY id OFFSET %d LIMIT %d", page-1, limit)
+	sqlQuery += fmt.Sprintf(" ORDER BY id DESC OFFSET %d LIMIT %d", page-1, limit)
 
 	if err = db.GetDBConn().Raw(sqlQuery).Scan(&r).Error; err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())

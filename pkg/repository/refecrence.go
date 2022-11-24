@@ -81,7 +81,7 @@ func ChangeReferenceStatus(id int, comment, statusType string) error {
 	case "canceled":
 		status = "Отменено"
 	case "ready":
-		status = "Готово"
+		status = "Принято"
 	}
 
 	sqlQuery := "UPDATE \"references\" set \"status\" = ?, \"comment\" = ?, \"status_type\" = ? WHERE id = ?"

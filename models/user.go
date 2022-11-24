@@ -10,3 +10,10 @@ type User struct {
 	IsSuperAdmin   bool   `json:"is_super_admin"`
 	OldPassword    string `json:"old_password"`
 }
+
+type AdminActivity struct {
+	ID          int    `json:"id"`
+	FullName    string `json:"full_name"`
+	Description string `json:"description"`
+	CreatedAt   string `json:"created_at"`
+}

@@ -87,3 +87,28 @@ func DeleteAdmin(c *gin.Context) {
 
 	c.JSON(http.StatusOK, gin.H{"reason": "пользователь успешно удален"})
 }
+
+func GetAdminsActivity(c *gin.Context) {
+	a := []models.AdminActivity{
+		models.AdminActivity{
+			ID:          1,
+			FullName:    "Testov Test",
+			Description: "Изменил статус заявки",
+			CreatedAt:   "2022-11-15 17:45:11.080194 +00:00",
+		},
+		models.AdminActivity{
+			ID:          2,
+			FullName:    "Testov Test",
+			Description: "Изменил статус заявки",
+			CreatedAt:   "2022-11-15 17:45:11.080194 +00:00",
+		},
+		models.AdminActivity{
+			ID:          3,
+			FullName:    "Testov Test",
+			Description: "Изменил статус заявки",
+			CreatedAt:   "2022-11-15 17:45:11.080194 +00:00",
+		},
+	}
+
+	c.JSON(http.StatusOK, a)
+}

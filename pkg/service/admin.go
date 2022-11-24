@@ -28,3 +28,7 @@ func CreateNewAdmin(admin models.User) (err error) {
 func DeleteAdmin(id int) error {
 	return repository.DeleteAdmin(id)
 }
+
+func GetAdminsActivity(page, limit int, search string) (activity []models.AdminActivity, lastPage int, err error) {
+	return repository.GetAdminsActivity(page, limit, search)
+}

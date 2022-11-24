@@ -90,26 +90,30 @@ func DeleteAdmin(c *gin.Context) {
 }
 
 func GetAdminsActivity(c *gin.Context) {
-	a := []models.AdminActivity{
-		models.AdminActivity{
-			ID:          1,
-			FullName:    "Testov Test",
-			Description: "Изменил статус заявки",
-			CreatedAt:   "2022-11-15 17:45:11.080194 +00:00",
-		},
-		models.AdminActivity{
-			ID:          2,
-			FullName:    "Testov Test",
-			Description: "Изменил статус заявки",
-			CreatedAt:   "2022-11-15 17:45:11.080194 +00:00",
-		},
-		models.AdminActivity{
-			ID:          3,
-			FullName:    "Testov Test",
-			Description: "Изменил статус заявки",
-			CreatedAt:   "2022-11-15 17:45:11.080194 +00:00",
-		},
+	page, err := strconv.Atoi(c.Query("page"))
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"reason": err.Error()})
+		return
 	}
 
-	c.JSON(http.StatusOK, a)
+	limit, err := strconv.Atoi(c.Query("per_page"))
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"reason": err.Error()})
+		return
+	}
+
+	search := c.Query("search")
+
+	activity, lastPage, err := service.GetAdminsActivity(page, limit, search)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"reason": err.Error()})
+		return
+
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"activity":  activity,
+		"last_page": lastPage,
+	},
+	)
 }

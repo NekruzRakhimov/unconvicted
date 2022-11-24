@@ -106,11 +106,13 @@ func ChangeReferenceStatus(c *gin.Context) {
 		return
 	}
 
-	status := c.Query("status")
+	var refStatus models.ReferenceStatus
+	if err = c.BindJSON(&refStatus); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"reason": err.Error()})
+		return
+	}
 
-	comment := c.Query("comment")
-
-	if err := service.ChangeReferenceStatus(id, status, comment); err != nil {
+	if err = service.ChangeReferenceStatus(id, refStatus.Status, refStatus.Comment); err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"reason": err.Error()})
 		return
 	}

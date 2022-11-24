@@ -20,3 +20,8 @@ type Reference struct {
 	CreatedAt          string `json:"created_at"`
 	ReceivingRegion    string `json:"receiving_region"`
 }
+
+type ReferenceStatus struct {
+	Status  string `json:"status"`
+	Comment string `json:"comment"`
+}

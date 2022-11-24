@@ -73,9 +73,19 @@ func GetReferenceByID(id int) (r models.Reference, err error) {
 	return r, nil
 }
 
-func ChangeReferenceStatus(id int, comment, status string) error {
-	sqlQuery := "UPDATE \"references\" set \"status\" = ?, \"comment\" = ? WHERE id = ?"
-	if err := db.GetDBConn().Exec(sqlQuery, status, comment, id).Error; err != nil {
+func ChangeReferenceStatus(id int, comment, statusType string) error {
+	var status string
+	switch statusType {
+	case "on_consideration":
+		status = "На рассмотрение"
+	case "canceled":
+		status = "Отменено"
+	case "ready":
+		status = "Готово"
+	}
+
+	sqlQuery := "UPDATE \"references\" set \"status\" = ?, \"comment\" = ?, \"status_type\" = ? WHERE id = ?"
+	if err := db.GetDBConn().Exec(sqlQuery, status, comment, statusType, id).Error; err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
 		return errors.New("ошибка во время получения данных")
 	}

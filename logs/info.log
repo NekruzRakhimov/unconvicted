@@ -1,4 +1,30 @@
-[GIN] 2022/11/24 - 22:47:07 | 404 |     617.417µs |             ::1 | GET      "/api/admin/activity"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] GET    /api/images/:path         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] PUT    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.EditProfileInfo (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] GET    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceByID (6 handlers)
+[GIN-debug] PUT    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.ChangeReferenceStatus (6 handlers)
+[GIN-debug] GET    /api/admin/activity       --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAdminsActivity (5 handlers)
+[GIN-debug] GET    /api/admin/reference      --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllReferences (6 handlers)
+[GIN-debug] GET    /api/admin/reference/:id/template --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceTemplate (6 handlers)
+[GIN-debug] GET    /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllAdmins (6 handlers)
+[GIN-debug] POST   /api/admin/new            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] DELETE /api/admin/:id            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.DeleteAdmin (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555
 [GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
 
 [GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
@@ -22,8 +48,69 @@
 [GIN-debug] GET    /api/admin/reference/:id/template --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceTemplate (6 handlers)
 [GIN-debug] GET    /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllAdmins (6 handlers)
 [GIN-debug] POST   /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] POST   /api/admin/new            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
 [GIN-debug] DELETE /api/admin/:id            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.DeleteAdmin (6 handlers)
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on :5555
-[GIN] 2022/11/24 - 22:47:24 | 200 |    1.144208ms |             ::1 | GET      "/api/admin/activity"
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 401 with 200
+[GIN] 2022/11/25 - 01:47:02 | 200 |     434.585ms |             ::1 | PUT      "/api/reference/1"
+[GIN] 2022/11/25 - 01:48:56 | 200 |     767.839ms |             ::1 | PUT      "/api/reference/1"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] GET    /api/images/:path         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] PUT    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.EditProfileInfo (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] GET    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceByID (6 handlers)
+[GIN-debug] PUT    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.ChangeReferenceStatus (6 handlers)
+[GIN-debug] GET    /api/admin/activity       --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAdminsActivity (5 handlers)
+[GIN-debug] GET    /api/admin/reference      --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllReferences (6 handlers)
+[GIN-debug] GET    /api/admin/reference/:id/template --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceTemplate (6 handlers)
+[GIN-debug] GET    /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllAdmins (6 handlers)
+[GIN-debug] POST   /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] POST   /api/admin/new            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] DELETE /api/admin/:id            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.DeleteAdmin (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555
+[GIN] 2022/11/25 - 01:49:19 | 200 |  472.312667ms |             ::1 | PUT      "/api/reference/1"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.PingPong (5 handlers)
+[GIN-debug] GET    /swagger/*any             --> github.com/swaggo/gin-swagger.CustomWrapHandler.func1 (5 handlers)
+[GIN-debug] GET    /image                    --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] GET    /api/images/:path         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetImage (5 handlers)
+[GIN-debug] POST   /api/auth/sign-up         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignUp (5 handlers)
+[GIN-debug] POST   /api/auth/sign-in         --> github.com/NekruzRakhimov/unconvicted/pkg/controller.SignIn (5 handlers)
+[GIN-debug] GET    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMe (6 handlers)
+[GIN-debug] PUT    /api/auth/me              --> github.com/NekruzRakhimov/unconvicted/pkg/controller.EditProfileInfo (6 handlers)
+[GIN-debug] POST   /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateReference (5 handlers)
+[GIN-debug] GET    /api/reference            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetMyReferences (6 handlers)
+[GIN-debug] GET    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceByID (6 handlers)
+[GIN-debug] PUT    /api/reference/:id        --> github.com/NekruzRakhimov/unconvicted/pkg/controller.ChangeReferenceStatus (6 handlers)
+[GIN-debug] GET    /api/admin/activity       --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAdminsActivity (5 handlers)
+[GIN-debug] GET    /api/admin/reference      --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllReferences (6 handlers)
+[GIN-debug] GET    /api/admin/reference/:id/template --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetReferenceTemplate (6 handlers)
+[GIN-debug] GET    /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.GetAllAdmins (6 handlers)
+[GIN-debug] POST   /api/admin/               --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] POST   /api/admin/new            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.CreateAdmin (6 handlers)
+[GIN-debug] DELETE /api/admin/:id            --> github.com/NekruzRakhimov/unconvicted/pkg/controller.DeleteAdmin (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :5555
+[GIN] 2022/11/25 - 01:50:07 | 200 |  447.455292ms |             ::1 | PUT      "/api/reference/1"

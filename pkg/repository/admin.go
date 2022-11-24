@@ -54,7 +54,7 @@ func GetAdminsActivity(page, limit int, search string) (activity []models.AdminA
 		fmt.Println("here", lastPage)
 	}
 
-	sqlQuery += fmt.Sprintf(" ORDER BY id DESC OFFSET %d LIMIT %d", page-1*limit, limit)
+	sqlQuery += fmt.Sprintf(" ORDER BY id DESC OFFSET %d LIMIT %d", (page-1)*limit, limit)
 
 	if err = db.GetDBConn().Raw(sqlQuery).Scan(&activity).Error; err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())

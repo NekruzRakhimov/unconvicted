@@ -64,5 +64,5 @@ func initAllRoutes(r *gin.Engine) {
 	admin.POST("/", controller.UserIdentity, controller.CreateAdmin)
 	admin.POST("/users", controller.UserIdentity, controller.CreateAdmin)
 
-	admin.DELETE("/:id", controller.UserIdentity, controller.DeleteAdmin)
+	admin.DELETE("/users/:id", controller.UserIdentity, controller.DeleteAdmin)
 }

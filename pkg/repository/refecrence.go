@@ -79,7 +79,7 @@ func ChangeReferenceStatus(id int, comment, statusType string) error {
 	case "on_consideration":
 		status = "На рассмотрение"
 	case "canceled":
-		status = "Отменено"
+		status = "Отказано"
 	case "ready":
 		status = "Принято"
 	}

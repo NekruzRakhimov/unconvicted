@@ -38,8 +38,5 @@ func GetImage(c *gin.Context) {
 	case ".pdf":
 		c.Writer.Header().Set("Content-Type", "application/pdf")
 	}
-	fmt.Println(2)
-	c.File(fmt.Sprintf("images/%s/", "0f800_test.png"))
-	//c.JSON(http.StatusOK, "ok")
-	//c.File("files/template.doc")
+	c.File(fmt.Sprintf("images/%s", f))
 }

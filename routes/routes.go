@@ -57,7 +57,7 @@ func initAllRoutes(r *gin.Engine) {
 	admin := api.Group("/admin")
 	admin.GET("/activity", controller.GetAdminsActivity)
 	admin.GET("/reference", controller.UserIdentity, controller.GetAllReferences)
-	admin.GET("/reference/:id/template", controller.UserIdentity, controller.GetReferenceTemplate)
+	admin.POST("/reference/:id/template", controller.UserIdentity, controller.GetReferenceTemplate)
 	admin.GET("/", controller.UserIdentity, controller.GetAllAdmins)
 	admin.GET("/users", controller.UserIdentity, controller.GetAllAdmins)
 

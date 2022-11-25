@@ -50,7 +50,7 @@ func CreateReference(c *gin.Context) {
 		return
 	}
 
-	reference.PassportBack, err = SaveImage(c, "payment_receipt")
+	reference.PaymentReceipt, err = SaveImage(c, "payment_receipt")
 	if err != nil {
 		logger.Error.Printf("[%s] Error is: %s\n", utils.FuncName(), err.Error())
 		c.JSON(http.StatusBadRequest, gin.H{"reason": "payment_receipt field not found"})
